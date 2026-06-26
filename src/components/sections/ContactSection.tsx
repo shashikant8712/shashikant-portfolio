@@ -1,12 +1,26 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Send, Mail, Linkedin, Github, Twitter, MapPin, Clock } from 'lucide-react';
+import { Send, Mail, Linkedin, Github, MapPin, Clock } from 'lucide-react';
 
 const SOCIALS = [
-  { Icon: Github,   label: 'GitHub',   href: '#', color: '#94a3b8' },
-  { Icon: Linkedin, label: 'LinkedIn', href: '#', color: '#0ea5e9' },
-  { Icon: Twitter,  label: 'Twitter',  href: '#', color: '#38bdf8' },
-  { Icon: Mail,     label: 'Email',    href: 'mailto:shashikant@example.com', color: '#6366f1' },
+  {
+    Icon: Github,
+    label: 'GitHub',
+    href: 'https://github.com/shashikant8712',
+    color: '#94a3b8',
+  },
+  {
+    Icon: Linkedin,
+    label: 'LinkedIn',
+    href: 'https://www.linkedin.com/in/shashikant-83a68631b',
+    color: '#0ea5e9',
+  },
+  {
+    Icon: Mail,
+    label: 'Email',
+    href: 'mailto:shashikantsharma74081@gmail.com',
+    color: '#6366f1',
+  },
 ];
 
 export default function ContactSection() {
@@ -60,9 +74,9 @@ export default function ContactSection() {
               </h3>
               <div className="space-y-5">
                 {[
-                  { icon: <Mail size={15}/>,     label: 'Email',    val: 'shashikant@example.com', color: '#6366f1' },
-                  { icon: <MapPin size={15}/>,   label: 'Location', val: 'India — Open to Remote',  color: '#3b82f6' },
-                  { icon: <Clock size={15}/>,    label: 'Response', val: 'Within 24 hours',          color: '#06b6d4' },
+                  { icon: <Mail size={15}/>,     label: 'Email',    val: 'shashikantsharma74081@gmail.com', color: '#6366f1' },
+                  { icon: <MapPin size={15}/>,   label: 'Location', val: 'Uttar Pradesh, India',  color: '#3b82f6' },
+                  { icon: <Clock size={15}/>,    label: 'Response', val: 'Usually within 24 hours',          color: '#06b6d4' },
                 ].map(r => (
                   <div key={r.label} className="flex items-start gap-3.5">
                     <div

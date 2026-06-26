@@ -1,7 +1,12 @@
 import { motion } from 'framer-motion';
 import { Download, ArrowRight, Sparkles, Code2, Brain } from 'lucide-react';
 
-const ROLES = ['AI & ML Engineer', 'Full-Stack Developer', 'Problem Solver', 'Open Source Contributor'];
+const ROLES = [
+  'Aspiring Data Scientist',
+  'AI & ML Student',
+  'Python Developer',
+  'Machine Learning Enthusiast'
+];
 
 function TypingRole() {
   const [idx, setIdx]   = React.useState(0);
@@ -189,7 +194,7 @@ export default function HeroSection() {
             >
               <span className="badge">
                 <Sparkles size={10} />
-                B.Tech CSE — AI &amp; ML
+                B.Tech CSE (AI & ML) • AKTU
               </span>
             </motion.div>
 
@@ -233,10 +238,7 @@ export default function HeroSection() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.42, duration: 0.5 }}
             >
-              I build intelligent systems at the intersection of{' '}
-              <span className="text-blue-400 font-medium">Artificial Intelligence</span> and{' '}
-              <span className="text-cyan-400 font-medium">modern software engineering</span>.
-              From ML model design to full-stack deployment — I turn complex ideas into real-world products.
+              I'm a B.Tech CSE (AI & ML) student passionate about Artificial Intelligence, Machine Learning, Data Science, and Python. I enjoy building real-world projects and continuously improving my technical skills.
             </motion.p>
 
             {/* CTA row */}
@@ -258,8 +260,8 @@ export default function HeroSection() {
                 <Download size={15} />
                 Download Resume
               </button>
-              <button className="btn btn-secondary" onClick={() => go('contact')}>
-                Contact Me <ArrowRight size={15} />
+              <button className="btn btn-secondary" onClick={() => go('projects')}>
+                view projects <ArrowRight size={15} />
               </button>
             </motion.div>
 
@@ -270,9 +272,9 @@ export default function HeroSection() {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.65 }}
             >
-              <StatCard value="10+" label="Projects Built"   icon={Code2}  delay={0.7} />
-              <StatCard value="5+"  label="Certifications"  icon={Sparkles} delay={0.75} />
-              <StatCard value="2+"  label="Years Learning"  icon={Brain}  delay={0.8} />
+              <StatCard value="5+" label="Projects Built"   icon={Code2}  delay={0.7} />
+              <StatCard value="3+"  label="Certifications"  icon={Sparkles} delay={0.75} />
+              <StatCard value="1+"  label="Years Learning"  icon={Brain}  delay={0.8} />
             </motion.div>
           </div>
 

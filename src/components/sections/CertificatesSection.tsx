@@ -4,12 +4,36 @@ import { ExternalLink, Calendar, CheckCircle2 } from 'lucide-react';
 import { supabase, type Certificate } from '../../lib/supabase';
 
 const DEFAULTS: Certificate[] = [
-  { id:'c1', title:'Deep Learning Specialization',       issuer:'Coursera / deeplearning.ai', date_issued:'2024', image_url:null, credential_url:'#', order_index:0, visible:true },
-  { id:'c2', title:'Machine Learning — Andrew Ng',       issuer:'Coursera / Stanford',        date_issued:'2023', image_url:null, credential_url:'#', order_index:1, visible:true },
-  { id:'c3', title:'React & Next.js Advanced',           issuer:'Udemy',                      date_issued:'2023', image_url:null, credential_url:'#', order_index:2, visible:true },
-  { id:'c4', title:'AWS Cloud Practitioner',             issuer:'Amazon Web Services',        date_issued:'2024', image_url:null, credential_url:'#', order_index:3, visible:true },
-  { id:'c5', title:'Natural Language Processing',        issuer:'Hugging Face',               date_issued:'2024', image_url:null, credential_url:'#', order_index:4, visible:true },
-  { id:'c6', title:'Python for Data Science & AI',       issuer:'IBM / Coursera',             date_issued:'2022', image_url:null, credential_url:'#', order_index:5, visible:true },
+  {
+    id: 'c1',
+    title: 'Fundamentals of Artificial Intelligence',
+    issuer: 'Wadhwani Foundation',
+    date_issued: 'Jun 2026',
+    image_url: null,
+    credential_url: 'https://web.certificate.wfglobal.org/en/certificate?certificateId=6a3177986d83cd224e5acc68',
+    order_index: 1,
+    visible: true,
+  },
+  {
+    id: 'c2',
+    title: 'AI For India 2.0',
+    issuer: 'GUVI',
+    date_issued: 'Jun 2026',
+    image_url: null,
+    credential_url: 'https://www.guvi.in/share-certificate/8R45Sx1Wd1t6O17y07',
+    order_index: 2,
+    visible: true,
+  },
+  {
+    id: 'c3',
+    title: 'Network Security Engineer',
+    issuer: 'NASSCOM',
+    date_issued: 'Jun 2026',
+    image_url: null,
+    credential_url: 'https://api-fe.skillindiadigital.gov.in/api/registry-course/getCertificatePresignedUrl/2025080312987976-aea0e014-9bff-40e4-b2d2-1013f11aa122',
+    order_index: 3,
+    visible: true,
+  },
 ];
 
 const ACCENT = ['#3b82f6','#06b6d4','#6366f1','#3b82f6','#06b6d4','#6366f1'];

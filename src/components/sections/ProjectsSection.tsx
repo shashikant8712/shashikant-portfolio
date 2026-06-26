@@ -5,33 +5,25 @@ import { supabase, type PortfolioProject } from '../../lib/supabase';
 
 const DEFAULTS: PortfolioProject[] = [
   {
-    id: 'p1', title: 'MediScan AI',
-    description: 'Deep learning system for early-stage medical image diagnosis using CNN architectures (ResNet-50). Achieves 94% accuracy on chest X-ray classification.',
-    image_url: 'https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=800',
-    tags: ['Python', 'PyTorch', 'CNN', 'FastAPI', 'React'],
-    link_url: '#', github_url: '#', section_id: null, order_index: 0, visible: true, created_at: '',
-  },
-  {
-    id: 'p2', title: 'LexiChat — RAG Chatbot',
-    description: 'Retrieval-Augmented Generation chatbot built over custom knowledge bases. Supports multi-turn conversations, PDF ingestion and semantic search.',
-    image_url: 'https://images.pexels.com/photos/1252869/pexels-photo-1252869.jpeg?auto=compress&cs=tinysrgb&w=800',
-    tags: ['LangChain', 'OpenAI', 'Pinecone', 'Next.js', 'Supabase'],
-    link_url: '#', github_url: '#', section_id: null, order_index: 1, visible: true, created_at: '',
-  },
-  {
-    id: 'p3', title: 'StockPulse — ML Trading',
-    description: 'Time-series forecasting for equity markets using LSTM + Transformer hybrid. Dashboard with live data visualisation and portfolio back-testing.',
-    image_url: 'https://images.pexels.com/photos/1183099/pexels-photo-1183099.jpeg?auto=compress&cs=tinysrgb&w=800',
-    tags: ['Python', 'TensorFlow', 'React', 'REST API', 'PostgreSQL'],
-    link_url: '#', github_url: '#', section_id: null, order_index: 2, visible: true, created_at: '',
-  },
-  {
-    id: 'p4', title: 'DevFlow — Developer Hub',
-    description: 'Full-stack developer productivity platform with code review automation, PR analytics, CI/CD integration and team collaboration features.',
-    image_url: 'https://images.pexels.com/photos/1532771/pexels-photo-1532771.jpeg?auto=compress&cs=tinysrgb&w=800',
-    tags: ['TypeScript', 'React', 'Node.js', 'PostgreSQL', 'Docker'],
-    link_url: '#', github_url: '#', section_id: null, order_index: 3, visible: true, created_at: '',
-  },
+    id: 'p1',
+
+    title: 'AI Portfolio Website',
+
+    description: 'A modern personal portfolio website showcasing my education, skills, certificates and projects. Built with React, TypeScript and Tailwind CSS using Bolt AI and customized by me.',
+
+    image_url: '',
+
+    tags: ['React', 'TypeScript', 'Tailwind CSS', 'Vite', 'Bolt AI'],
+
+    link_url: '#',
+
+    github_url: '#',
+
+    section_id: null,
+    order_index: 0,
+    visible: true,
+    created_at: '',
+  }
 ];
 
 function ProjectCard({ p, i }: { p: PortfolioProject; i: number }) {
@@ -121,9 +113,9 @@ export default function ProjectsSection() {
   const [loading, setLoading]   = useState(true);
 
   useEffect(() => {
-    supabase.from('portfolio_projects').select('*').eq('visible', true).order('order_index')
-      .then(({ data }) => { setProjects(data && data.length ? data : DEFAULTS); setLoading(false); });
-  }, []);
+  setProjects(DEFAULTS);
+  setLoading(false);
+}, []);
 
   return (
     <section id="projects" className="relative py-28 px-6">
@@ -138,7 +130,7 @@ export default function ProjectsSection() {
           <h2 className="section-heading mt-4">Selected <span className="text-glow">Projects</span></h2>
           <div className="glow-line w-12 mx-auto mt-4" />
           <p className="text-slate-500 mt-4 max-w-md mx-auto text-sm">
-            A selection of real-world projects spanning AI, ML and full-stack engineering.
+            Personal projects showcasing my skills in AI, Web Development and Software Engineering.
           </p>
         </motion.div>
 

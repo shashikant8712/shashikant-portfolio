@@ -6,18 +6,38 @@ import React from 'react';
 const FACTS = [
   { icon: Code2,  label: 'Primary Stack',   value: 'Python · React · Node.js' },
   { icon: Brain,  label: 'AI Focus',         value: 'ML, Deep Learning, NLP, LLMs' },
-  { icon: Globe,  label: 'Location',         value: 'India — Open to Remote' },
+  { icon: Globe,  label: 'Location',         value: 'Uttar Pradesh, India' },
   { icon: Users,  label: 'Education',        value: 'B.Tech CSE (AI & ML)' },
   { icon: Award,  label: 'Specialisation',   value: 'AI/ML · Software Engineering' },
   { icon: Coffee, label: 'Current Goal',     value: 'Building AGI-era products' },
 ];
-
 const TIMELINE = [
-  { year: '2021', title: 'Started B.Tech CSE',  desc: 'Enrolled in Computer Science with specialisation in Artificial Intelligence & Machine Learning.', color: '#3b82f6' },
-  { year: '2022', title: 'First ML Project',    desc: 'Built a real-time object detection system using YOLOv5 and deployed it on a Raspberry Pi.', color: '#06b6d4' },
-  { year: '2023', title: 'Full-Stack Dev',       desc: 'Learned React, Node.js and Supabase. Shipped multiple production-quality web applications.', color: '#6366f1' },
-  { year: '2024', title: 'AI Products',          desc: 'Integrated LLM APIs, built RAG pipelines and started contributing to open-source AI projects.', color: '#3b82f6' },
+  {
+    year: '2024',
+    title: 'Passed Class 12',
+    desc: 'Completed Higher Secondary Education.',
+    color: '#3b82f6'
+  },
+  {
+    year: '2025',
+    title: 'Started B.Tech CSE (AI & ML)',
+    desc: 'Joined Accurate Institute of Management & Technology (AKTU).',
+    color: '#06b6d4'
+  },
+  {
+    year: '2026',
+    title: 'Learning AI & Web Development',
+    desc: 'Learning React, JavaScript and Artificial Intelligence.',
+    color: '#6366f1'
+  },
+  {
+    year: 'Future',
+    title: 'Aspiring AI Engineer',
+    desc: 'Looking for internships and opportunities in AI & Software Development.',
+    color: '#3b82f6'
+  }
 ];
+
 
 function FadeIn({ children, delay = 0 }: { children: React.ReactNode; delay?: number }) {
   const ref    = useRef<HTMLDivElement>(null);
