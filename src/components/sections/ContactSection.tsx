@@ -1,3 +1,4 @@
+import emailjs from "@emailjs/browser";
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Send, Mail, Linkedin, Github, MapPin, Clock } from 'lucide-react';
@@ -28,14 +29,31 @@ export default function ContactSection() {
   const [sent, setSent]       = useState(false);
   const [sending, setSending] = useState(false);
 
-  function change(e: React.ChangeEvent<HTMLElement | HTMLTextAreaElement>) {
-    setForm(p => ({ ...p, [e.target.name]: e.target.value }));
-  }
+  function change(e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) {
+  const target = e.target as HTMLInputElement | HTMLTextAreaElement;
+
+  setForm((p) => ({
+    ...p,
+    [target.name]: target.value,
+  }));
+} 
 
   async function submit(e: React.FormEvent) {
     e.preventDefault();
     setSending(true);
-    await new Promise(r => setTimeout(r, 1000));
+    await emailjs.send(
+  "service_2r489y6",
+  "template_9l74zqq",
+  {
+    name: form.name,
+    email: form.email,
+    message: form.message,
+    title: "Portfolio Contact",
+  },
+  "1IUskmbt7M-vJ_L9P"
+);
+    
+    
     setSending(false);
     setSent(true);
     setForm({ name: '', email: '', message: '' });
