@@ -28,7 +28,7 @@ export default function ContactSection() {
   const [sent, setSent]       = useState(false);
   const [sending, setSending] = useState(false);
 
-  function change(e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) {
+  function change(e: React.ChangeEvent<HTMLElement | HTMLTextAreaElement>) {
     setForm(p => ({ ...p, [e.target.name]: e.target.value }));
   }
 
@@ -176,17 +176,17 @@ export default function ContactSection() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-xs text-slate-500 mb-1.5 tracking-wide">Name</label>
-                    <input className="input" name="name" value={form.name} onChange={change} placeholder="Your name" required />
+                    <input className="input-field" name="name" value={form.name} onChange={change} placeholder="Your name" required />
                   </div>
                   <div>
                     <label className="block text-xs text-slate-500 mb-1.5 tracking-wide">Email</label>
-                    <input className="input" name="email" type="email" value={form.email} onChange={change} placeholder="your@email.com" required />
+                    <input className="input-field" name="email" type="email" value={form.email} onChange={change} placeholder="your@email.com" required />
                   </div>
                 </div>
                 <div>
                   <label className="block text-xs text-slate-500 mb-1.5 tracking-wide">Message</label>
                   <textarea
-                    className="input"
+                    className="input-field"
                     name="message"
                     value={form.message}
                     onChange={change}
